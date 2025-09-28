@@ -48,6 +48,34 @@ This is the **front-end** for the Task Management App, built with **React** and 
    http://localhost:3000
    ```
 
+⚠️IMPORTANT⚠️
+
+IF THIS POPS UP WHEN INSTALLING "To address all issues (including breaking changes), run:
+  npm audit fix --force" 
+  
+  **DON'T DO IT**.
+
+  Now if you accidentally did it, you need to follow these steps to fix it.
+  **Inside Bash**
+  
+  * 1. In your front-end folder (activity1): 
+     
+     rm -rf node_modules package-lock.json
+
+  * 2. Reinstall react-scripts manually, Since it’s missing or broken, install the exact version your project expects:
+     
+     npm install react-scripts@5.0.1 --save
+
+  * 3. Reinstall everything else
+    
+     npm install
+
+  * 4. Start the app again
+
+     npm start
+
+
+
 ⚠️ Make sure your **back-end (NestJS)** is running on a different port (also `3000` by default).
 If both front-end and back-end use the same port, you’ll need to:
 
